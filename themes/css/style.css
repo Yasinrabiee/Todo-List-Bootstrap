@@ -1,0 +1,46 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+	background-color: #FAFAFA;
+}
+
+#container {
+	margin: 1rem auto;
+	padding: 1rem;
+	width: 100%;
+	max-width: 600px;
+	min-height: 500px;
+/*	text-align: center;*/
+}
+
+#colors {
+	display: flex;
+	gap: 16px;
+	margin-block-start: 8px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#colors div {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+#btn {
+	margin-block-end: 12px;
+}
+
+#preview li{
+	margin-block-end: 8px;
+	transition: all 0.15s ease-in-out;
+}
+
+/*ul {
+	display: block;
+	margin: 0 auto;
+}*/

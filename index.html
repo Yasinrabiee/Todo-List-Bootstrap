@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Todo List</title>
+	<link rel="stylesheet" href="themes/css/bootstrap.rtl.min.css">
+	<link rel="stylesheet" href="themes/css/style.css">
+	<script src="themes/js/jquery.min.js"></script>
+	<script src="themes/js/script.js" defer></script>
+</head>
+<body>
+	<div id="container">
+		<input type="text" id="text" class="form-control" autofocus>
+		<div id="colors">
+			<div class="color success alert alert-success"></div>
+			<div class="color warning alert alert-warning"></div>
+			<div class="color danger alert alert-danger"></div>
+			<div class="color primary alert alert-primary"></div>
+			<div class="color info alert alert-info"></div>
+			<div class="color secondary alert alert-secondary"></div>
+		</div>
+		<ul id="preview" class="list-group">
+			<li class="list-group-item">Color Preview</li>
+		</ul>
+		<div style="text-align: center;">
+			<button class="btn btn-primary" id="btn">Add</button>
+		</div>
+		<ul class="list-group" id="todos">
+			<li class="list-group-item disabled">Todo List</li>
+		</ul>
+	</div>
+</body>
+</html>
