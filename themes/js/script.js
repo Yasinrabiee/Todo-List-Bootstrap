@@ -23,12 +23,13 @@ btn.click(function() {
 	const text = input.val();
 	input.val(``);
 	todo.append(`
-		<li class="items" id="item-${numberTodo}">${text}</li>
+		<li class="items list-group-item" id="item-${numberTodo}" style="background-color: ${bgc}">${text}</li>
 	`);
 	input.focus();
 	let newObject = {
 		number: numberTodo,
-		text: text
+		text: text,
+		color: bgc
 	}
 	todos.push(newObject);
 	localStorage.setItem(`todos`, JSON.stringify(todos));
@@ -38,10 +39,9 @@ window.addEventListener(`load`, function(e) {
 	let lastTodos = JSON.parse(localStorage.getItem(`todos`));
 	if (lastTodos !== null) {
 		const l = lastTodos.length;
-		console.log(lastTodos);
 		for (let i = 0; i < l; i++) {
 			todo.append(`
-				<li class="items" id="item-${lastTodos[i].number}">
+				<li class="items list-group-item" id="item-${lastTodos[i].number}" style="background-color: ${lastTodos[i].color}">
 					${lastTodos[i].text}
 				</li>
 			`);			

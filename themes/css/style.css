@@ -1,5 +1,7 @@
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -13,13 +15,14 @@ body {
 	width: 100%;
 	max-width: 600px;
 	min-height: 500px;
-/*	text-align: center;*/
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
 }
 
 #colors {
 	display: flex;
 	gap: 16px;
-	margin-block-start: 8px;
 	flex-wrap: wrap;
 	justify-content: center;
 }
@@ -31,16 +34,6 @@ body {
 	cursor: pointer;
 }
 
-#btn {
-	margin-block-end: 12px;
-}
-
 #preview li{
-	margin-block-end: 8px;
 	transition: all 0.15s ease-in-out;
 }
-
-/*ul {
-	display: block;
-	margin: 0 auto;
-}*/
