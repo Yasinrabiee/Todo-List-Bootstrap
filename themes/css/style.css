@@ -1,3 +1,14 @@
+@font-face {
+	font-family: Vazir;
+	src: url("../fonts/Vazirmatn-Bold.woff2");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: Vazir;
+	src: url("../fonts/Vazirmatn-Regular.woff2");
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -5,7 +16,7 @@
 }
 
 body {
-	font-family: sans-serif;
+	font-family: Vazir, sans-serif;
 	background-color: #FAFAFA;
 }
 
@@ -37,3 +48,20 @@ body {
 #preview li{
 	transition: all 0.15s ease-in-out;
 }
+
+#todos li {
+	cursor: pointer;
+}
+
+/*@keyframes animate {
+	from {
+		transform: translateX(-100px);
+	}
+	to {
+		transform: translateX(0px);
+	}
+}
+
+.items {
+	animation: animate 1s;
+}*/
