@@ -53,15 +53,10 @@ body {
 	cursor: pointer;
 }
 
-/*@keyframes animate {
-	from {
-		transform: translateX(-100px);
-	}
-	to {
-		transform: translateX(0px);
-	}
+#btn:hover {
+    background-color: #C71729;
 }
 
-.items {
-	animation: animate 1s;
-}*/
+#btn:active {
+    transform: scale(0.98);
+}

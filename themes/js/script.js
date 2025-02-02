@@ -51,20 +51,38 @@ function checkDir(text) {
 	return false;
 }
 
+function confettiAnimate() {
+	confetti({
+	    particleCount: 100,
+	    spread: 70,
+	    origin: { y: 0.6 }
+	});
+
+	btn.style.transform = 'scale(0.95)';
+	setTimeout(() => {
+	    btn.style.transform = 'scale(1)';
+	}, 100);
+}
+
 btn.click(function() {
-	if (input.val() !== ``)
+	if (input.val() !== ``) {
 		addTodo();
+		// confettiAnimate();
+	}
 });
 
 input.keydown(function(e) {
 	if (input.val() !== ``) {
-		if (e.key === `Enter`)
+		if (e.key === `Enter`) {
 			addTodo();
+			// confettiAnimate();
+		}
 	}
 });
 
 window.addEventListener(`load`, function(e) {
 	let lastTodos = JSON.parse(localStorage.getItem(`todos`));
+
 	if (lastTodos !== null) {
 		const l = lastTodos.length;
 		for (let i = 0; i < l; i++) {
@@ -74,20 +92,18 @@ window.addEventListener(`load`, function(e) {
 				direction: ${lastTodos[i].direction};">
 					${lastTodos[i].text}
 				</li>
-			`);			
+			`);		
 		}
 	}
 });
 
 todo.on('click', 'li', function() {
 	$(this).fadeOut();
-
-	// let item = $(this).html();
-	// item = item.replaceAll(/\s/g, ``);
 	let item = $(this).attr(`id`);
 	item = item.replaceAll(`item-`, ``);
 	todos = removeItem(todos, item);
 	localStorage.setItem(`todos`, JSON.stringify(todos));
+	confettiAnimate();
 });
 
 $(`.color`).click(function() {
